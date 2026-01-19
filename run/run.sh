@@ -2,10 +2,10 @@
 
 set -e
 
-g++ WindowManager.cpp -o main -Wall -Wextra -std=c++17 -lX11
+g++ ./code/cpp/WindowManager.cpp -o ./build/main -Wall -Wextra -std=c++17 -lX11
 
 XEPHYR=$(command -v Xephyr) # Absolute path of Xephyr's bin
-xinit ./xinitrc -- \
+xinit ./run/xinitrc -- \
     "$XEPHYR" \
         :100 \
         -ac \
